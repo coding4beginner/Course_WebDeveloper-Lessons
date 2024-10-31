@@ -1,0 +1,12 @@
+Repositories.CSS
+Repositories.JS
+
+**/.DS_Store
+
+**/Library
+
+**/.venv
+**/.local
+**/.cache
+**/.rustup
+
