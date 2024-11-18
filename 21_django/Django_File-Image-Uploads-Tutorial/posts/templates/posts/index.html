@@ -1,0 +1,43 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+<h1>Django Image Uploading</h1>
+
+<div class="image-grid">
+  {% for post in object_list %}
+  <div class="image-card">
+    <h2>{{ post.title }}</h2>
+
+    <nav role="navigation">
+      <div class="menu-toggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <i class="fas fa-bars menu-trigger" data-id="{{ post.id }}"></i>
+
+        <ul class="menu-items">
+          <a href="#"><li>uss</li></a>
+          <a href="#"><li>about</li></a>
+          <a href="#"><li>info</li></a>
+        </ul>
+      </div>
+    </nav>
+
+    <!--
+    <figure tabindex="-1">
+      <img
+        src="{{ post.cover.url }}"
+        alt="{{ post.title }}"
+        class="image-thumbnail menu-trigger"
+        data-id="{{ post.id }}"
+      />
+    </figure>
+    -->
+  </div>
+  {% endfor %}
+</div>
